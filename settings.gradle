@@ -1,0 +1,3 @@
+include ':JobsPriorityQueue'
+include ':app'
+rootProject.name = "JobHandler"
