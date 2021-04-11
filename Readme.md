@@ -39,10 +39,10 @@ class MyJob(jobSuccessListener: OnJobSuccessListener?) : JobHandler(jobSuccessLi
 
 Now on your Main activity create your job object and add it in the job queue.
 
-var myJob : MyJob = JobHandler(object : onSuccessfulJobCompletion {
-  /* On successful completetion this listener will be called and you can further proceed your work on successful completion. */
-})
+ val myJob : MyJob = JobHandler(object : onSuccessfulJobCompletion {
+            /* On successful completetion this listener will be called and you can further proceed your work on successful completion. */
+        })
 
-myJob.addJob(myJob.createJob(*your object to be used in execution*, JobHandler.PRIORITY_HIGHEST *add priority of your choice*))
+  myJob.addJob(myJob.createJob(/*your object to be used in execution*/, JobHandler.PRIORITY_HIGHEST /*add priority of your choice*/))
 
 Thats it... 
